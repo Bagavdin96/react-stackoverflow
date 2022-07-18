@@ -12,7 +12,7 @@ function App() {
         return el.is_answered && el.owner.reputation >= 50
       }))
       .then((res) => _.orderBy(res, 'creation_date', 'asc'))
-      .then((data) => setTimeout(() => setPosts(data), 5000))
+      .then((data) => setPosts(data))
       .catch((err) => console.log(err))
   }, [])
 
